@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2012 Cleversoap
+ * cleversoap.com
+ */
+
 #ifndef __SIGPLUS_HPP__
 #define __SIGPLUS_HPP__
 
