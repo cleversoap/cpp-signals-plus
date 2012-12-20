@@ -29,10 +29,13 @@ class SPSingle : public SigPlus<T...>
 
 		virtual void remove(SlotFunc slotFunc)
 		{
-			if (slotFunc.template target<SlotDelegate*>() ==
-				static_cast<SlotFunc>(*_slot).template target<SlotDelegate*>())
+			if (_slot != nullptr)
 			{
-				clear();
+				if (slotFunc.template target<SlotDelegate*>() ==
+					static_cast<SlotFunc>(*_slot).template target<SlotDelegate*>())
+				{
+					clear();
+				}
 			}
 		}
 
@@ -45,7 +48,8 @@ class SPSingle : public SigPlus<T...>
 		virtual void clear()
 		{
 			if (_slot != nullptr)
-				delete _slot;
+				_slot = nullptr;
+			// TODO: See if a delete should be used
 		}
 
 	protected:
