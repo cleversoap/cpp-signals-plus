@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2012 Cleversoap
+ * cleversoap.com
+ */
+
 #ifndef __SPTMULTI_HPP__
 #define __SPTMULTI_HPP__
 
